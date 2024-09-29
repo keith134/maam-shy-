@@ -1,0 +1,139 @@
+/* Google Fonts and Animation Library */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Basic Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1c1f2e;
+    color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header Section */
+.header {
+    margin-top: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #a4b0be;
+}
+
+/* Poem Section */
+.poem {
+    margin: 50px 0;
+    background: linear-gradient(135deg, #444b6e 0%, #5b6987 100%);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.poem h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.poem-text p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Message Button */
+.message-btn {
+    background-color: #57606f;
+    color: #f5f5f5;
+    font-size: 1em;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    transition: all 0.3s ease-in-out;
+    animation: bounce 1.5s infinite;
+}
+
+.message-btn:hover {
+    background-color: #2f3542;
+    transform: translateY(-3px);
+}
+
+/* Message Section */
+.message {
+    display: none;
+    margin: 50px 0;
+    background: linear-gradient(135deg, #4b6584 0%, #6a7a98 100%);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    animation: slideUp 1.5s ease-in-out;
+}
+
+.message h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.message-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
+}
